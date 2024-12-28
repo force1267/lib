@@ -9,7 +9,7 @@ import (
 var configEmbedFS embed.FS
 
 func GetVersion() (int, error) {
-	configFileContent, err := configEmbedFS.ReadFile("data/hello.txt")
+	configFileContent, err := configEmbedFS.ReadFile("config/config.json")
 	if err != nil {
 		return 0, err
 	}
